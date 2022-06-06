@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                           const EdgeInsets.only(top: 15, left: 20, right: 20),
                       child: GestureDetector(
                         onTap: () {
-                          Get.to(const DetailPage());
+                          Get.to(DetailPage(index: index,));
                         },
                         child: Stack(
                           children: [
