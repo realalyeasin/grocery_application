@@ -1,16 +1,8 @@
-# grocery_application
+# Grocery Application
 
-A new Flutter project.
+A Flutter project using GetX and Bloc and API call to fetch data
 
-## Getting Started
+## Preview
 
-This project is a starting point for a Flutter application.
+![1](https://user-images.githubusercontent.com/64202952/172184568-0efd3f2d-7f68-4060-a449-e2b2ea4e7bc8.png)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
