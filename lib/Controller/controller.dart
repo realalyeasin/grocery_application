@@ -5,12 +5,16 @@ class Controller extends GetxController {
   var isLoading = true.obs;
   var groceryList = [].obs;
 
-  void onInit() {}
+  @override
+  void onInit() {
+    fetch();
+    super.onInit();
+  }
 
   void fetch() async {
     try {
       isLoading(true);
-      var groceries = (await Repo.getData())?.data!.products!.results;
+      var groceries = (await Repo.getData())?.data!.products.results;
       if (groceries != null) {
         Rx(groceryList.value = groceries);
       }
