@@ -6,7 +6,7 @@ class Repo {
   static Future<GroceryModel?> getData() async {
     String url = 'https://panel.supplyline.network/api/product/search-suggestions/?limit=10&offset=10';
     final response = await http.Client().get(Uri.parse(url));
-    if(response.body != 200){
+    if(response.statusCode != 200){
       throw Exception();
     } else {
       print(response.body);
