@@ -30,7 +30,6 @@ dependencies:
   flutter:
     sdk: flutter
   get:
-  bloc:
   flutter_bloc:
   http:
   flutter_html:

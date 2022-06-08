@@ -4,8 +4,6 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:get/get.dart';
 import 'package:grocery_application/Controller/controller.dart';
 
-import '../Extension/custom_button.dart';
-
 class DetailPage extends StatelessWidget {
   DetailPage({Key? key, required this.index}) : super(key: key);
   int index;
@@ -236,61 +234,56 @@ class DetailPage extends StatelessWidget {
                                 padding: const EdgeInsets.only(
                                   left: 20,
                                 ),
-                                child: Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      const Padding(
-                                        padding: EdgeInsets.only(left: 7),
-                                        child: Text("বিস্তারিত",
-                                            style: TextStyle(
-                                                fontFamily: 'HindSiliguri',
-                                                fontWeight: FontWeight.w700,
-                                                fontSize: 15)),
-                                      ),
-                                      Html(data: description, style: {
-                                        "span": Style(
-                                            color: Colors.black,
-                                            fontSize: FontSize.medium),
-                                      }),
-                                    ],
-                                  ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Padding(
+                                      padding: EdgeInsets.only(left: 7),
+                                      child: Text("বিস্তারিত",
+                                          style: TextStyle(
+                                              fontFamily: 'HindSiliguri',
+                                              fontWeight: FontWeight.w700,
+                                              fontSize: 15)),
+                                    ),
+                                    Html(data: description, style: {
+                                      "span": Style(
+                                          color: Colors.black,
+                                          backgroundColor: Colors.white,
+                                          fontSize: FontSize.medium),
+                                    }),
+                                  ],
                                 ),
                               )
                             ],
                           ),
                           Positioned(
-                              top: 65,
+                              top: 75,
                               left: 158,
                               child: GestureDetector(
                                 onTap: () {
                                   print("এটি কিনুন");
                                 },
                                 child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(50),
-                                    child: CustomPaint(
-                                      painter: CustomButton(),
-                                      child: Container(
-                                        color: Colors.yellow.shade400,
-                                        width: 80,
-                                        height: 76,
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: const [
-                                            Text(
-                                              "এটি",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            Text(
-                                              "কিনুন",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                          ],
-                                        ),
+                                    borderRadius: BorderRadius.circular(10),
+                                    child: Container(
+                                      color: Colors.yellow.shade600,
+                                      width: 65,
+                                      height: 65,
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: const [
+                                          Text(
+                                            "এটি",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          Text(
+                                            "কিনুন",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ],
                                       ),
                                     )),
                               ))

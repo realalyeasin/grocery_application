@@ -218,14 +218,14 @@ class HomePage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(50),
                               child: Container(
-                                color: Colors.teal,
+                                color: Colors.black,
                                 height: 45,
                                 width: 45,
                                 child: IconButton(
                                   onPressed: () {
                                     print("Added");
                                   },
-                                  icon: Icon(Icons.add_circle),
+                                  icon: Icon(Icons.add_circle,color: Colors.white),
                                 ),
                               ),
                             )),
