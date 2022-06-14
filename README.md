@@ -2,6 +2,8 @@
 
 A Flutter project using GetX and Bloc and API call to fetch data
 
+YouTube Tutorial : https://www.youtube.com/watch?v=gsaVmJWOKaY
+
 ## Preview
 ![Grocery App](https://user-images.githubusercontent.com/64202952/172621606-d1da764e-dabc-4e5a-b717-c9a28ef7f9c6.png)
 
