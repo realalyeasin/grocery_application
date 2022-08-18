@@ -30,29 +30,36 @@ class _AddToCartState extends State<AddToCart> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
             Container(
-              color: Colors.deepPurple.withOpacity(.6),
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.deepPurple.withOpacity(.6),),
+
               child: Padding(
                 padding: const EdgeInsets.all(4.0),
-                child: Row(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text('${widget.name}'),
-                    IconButton(icon: Icon(Icons.remove_circle),onPressed: (){
-                      if(q>1)q--;
-                      setState(() {
-                      });
-                    },
-                    ),
-                    Text('${ widget.price == 0.0 ? 0 : q}'),
-                    IconButton(icon: Icon(Icons.add_circle),onPressed: (){
-                      q++;
-                      widget.price = widget.price + widget.price;
-                      setState(() {
+                    Text('${widget.name}',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(icon: Icon(Icons.remove_circle),onPressed: (){
+                          if(q>1)q--;
+                          setState(() {
+                          });
+                        },
+                        ),
+                        Text('${ widget.price == 0.0 ? 0 : q}'),
+                        IconButton(icon: Icon(Icons.add_circle),onPressed: (){
+                          q++;
+                          widget.price = widget.price + widget.price;
+                          setState(() {
 
-                      });
-                    },
+                          });
+                        },
+                        ),
+                      ],
                     ),
-                    Text('${widget.price}'" tk")
+                    Text('${widget.price}'" tk", style: TextStyle(fontWeight: FontWeight.bold),)
+
                   ],
                 ),
               ),

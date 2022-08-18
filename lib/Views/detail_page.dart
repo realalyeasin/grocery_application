@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:get/get.dart';
 import 'package:grocery_application/Controller/controller.dart';
+import 'package:grocery_application/Views/add_to_cart.dart';
 
 class DetailPage extends StatelessWidget {
   DetailPage({Key? key, required this.index}) : super(key: key);
@@ -261,6 +262,7 @@ class DetailPage extends StatelessWidget {
                               left: 158,
                               child: GestureDetector(
                                 onTap: () {
+                                  Get.to(()=>AddToCart(name: controller.groceryList[index].productName.toString(), price: controller.groceryList[index].charge.sellingPrice));
                                   print("এটি কিনুন");
                                 },
                                 child: ClipRRect(
