@@ -5,6 +5,7 @@ import 'package:grocery_application/Bloc/data_bloc.dart';
 import 'package:grocery_application/Bloc/data_event.dart';
 import 'package:grocery_application/Bloc/data_state.dart';
 import 'package:grocery_application/Controller/controller.dart';
+import 'add_to_cart.dart';
 import 'detail_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -44,7 +45,7 @@ class HomePage extends StatelessWidget {
     return Obx(() => Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
+              padding: const EdgeInsets.only(top: 10, left: 15, right: 15),
               child: Form(
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   child: TextFormField(
@@ -58,6 +59,7 @@ class HomePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(18))),
                   )),
             ),
+            SizedBox(height: 3,),
             Expanded(
                 child: GridView.count(
               crossAxisCount: 2,
@@ -223,8 +225,9 @@ class HomePage extends StatelessWidget {
                                     child: IconButton(
                                       onPressed: () {
                                         print("Added");
+                                        Get.to(()=>AddToCart(name: controller.groceryList[index].productName, price: controller.groceryList[index].charge.sellingPrice,));
                                       },
-                                      icon: Icon(Icons.add_circle,
+                                      icon: const Icon(Icons.add_circle,
                                           color: Colors.white),
                                     ),
                                   ),

@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -5,8 +6,11 @@ import 'package:grocery_application/Bloc/data_bloc.dart';
 import 'package:grocery_application/Views/homepage.dart';
 
 import 'Repository/repository.dart';
+import 'Views/navbar.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(BlocProvider<DataBloc>(
       create: (context)=>DataBloc(Repo()),
   child: MyApp(),));
@@ -24,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage()
+      home: NavBar()
     );
   }
 }
